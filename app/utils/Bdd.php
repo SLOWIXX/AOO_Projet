@@ -13,9 +13,9 @@ abstract class Bdd
  private function connect(): void
  {
   $this->co = new PDO(
-   'mysql:host=' . $_ENV['db_host'] . ';dbname=' . $_ENV['db_name'],
-   $_ENV['db_user'],
-   $_ENV['db_pwd']
+   'mysql:host=' . $_ENV['host'] . ';dbname=' . $_ENV['dbname'],
+   $_ENV['username'],
+   $_ENV['password']
   );
  }
 }
