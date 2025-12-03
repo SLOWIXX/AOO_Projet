@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // Chargement de l'autoload de vendor
 require './vendor/autoload.php';
 // Chargement des variables d'environnement
