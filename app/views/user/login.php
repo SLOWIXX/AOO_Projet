@@ -12,10 +12,10 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <label for="password" class="label">Password:</label>
+        <input type="password" id="password" name="password" class="input" required>
         <br>
-        <button type="submit">Login</button>
+        <button type="submit" class="submit-button">Login</button>
     </form>
 
     <p>C'est votre première connexion ? <a href="./register.php">S'inscrire</a></p>
