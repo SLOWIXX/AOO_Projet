@@ -1,5 +1,5 @@
 <?php
-class Activitie{
+class Activities{
 private int $id;
 private string $nom;
 private int $type_id;

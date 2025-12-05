@@ -53,7 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $userModel = new UserModel();
     if ($userModel->create($nom, $prenom, $email, $passwordHash)) {
         // Redirection si ça marche (vers la liste ou login)
-        // Adapte l'url selon ta config (index.php?url=user/login ou juste user/login)
         header('Location: /user/login'); 
         exit;
     } else {
@@ -89,7 +88,7 @@ if ($user && password_verify($password, $user->getPassword())) {
         'prenom' => $user->getPrenom(),
         'nom' => $user->getNom()
     ];
-    header('Location: /activities/index');
+    header('Location: /activities/home');
     exit;
 } else {
     $error = "Identifiants incorrects.";

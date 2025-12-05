@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <link rel="stylesheet" href="../css/style.css">
+    
 </head>
 <body>
     <h1>Login</h1>
@@ -18,7 +18,7 @@
         <button type="submit">Login</button>
     </form>
 
-    <p>C'est votre première connexion ? <a href="./register.php">S'inscrire</a></p>
+    <p>C'est votre première connexion ? <a href="./register">S'inscrire</a></p>
 
 </body>
 </html>
