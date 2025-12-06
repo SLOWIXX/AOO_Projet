@@ -10,6 +10,7 @@
     
         <label for="type_id">Type</label>
         <select name="type_id" id="type_id" style="width: 80%; border-radius:6px;" required>
+            <!-- Boucle pour mettre tout les type dans le select -->
             <?php foreach ($types as $type): ?>
                 <option value="<?= $type['id'] ?>"><?= $type['nom'] ?></option>
             <?php endforeach; ?>

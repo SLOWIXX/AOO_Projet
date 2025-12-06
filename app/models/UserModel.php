@@ -8,7 +8,7 @@ class UserModel extends Bdd
  {
   parent::__construct();
  }
-//la je recupere tout les utilisateur 
+//la je recupere tout les utilisateur (code du prof)
 public function findAll(): array
 {
 $users = $this->co->prepare('SELECT * FROM Users');
@@ -17,7 +17,7 @@ $users->execute();
 return $users->fetchAll(PDO::FETCH_CLASS, 'User');
 }
 
-//la je recupere mon utilisateur grace a son id (sert a rien car j'utilise l'email pour ca)
+//la je recupere mon utilisateur grace a son id (sert a rien car j'utilise l'email pour ca)(code du prof)
 public function findOneById(int $id): User | false
 {
 $users = $this->co->prepare('SELECT * FROM Users WHERE id = :id LIMIT 1');
@@ -46,7 +46,7 @@ public function create(string $nom, string $prenom, string $email, string $passw
     }
 }
 
-//ici je crée une fonction qui compare l'email d'un form avec celui da la bdd
+//ici je crée une fonction qui recupere les info d'un user selon l'email entrer dans le form 
     public function findByEmail(string $email)
 {
     $stmt = $this->co->prepare('SELECT * FROM users WHERE email = :email');//la requete ici sert a chercher dans ma table user tout les données de l'utilisateur qui a cet email 

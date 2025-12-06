@@ -17,16 +17,16 @@ class Router
     $params = []; // Pas de paramètres
     
     // 
-    // CHARGE LE CONTROLEUR PAR DEFAUT
+    // Charge le controleur par défaut
     if (file_exists("./app/controllers/$controllerName.php")) {
         require_once "./app/controllers/$controllerName.php";
         $controller = new $controllerName;
         // Appel la méthode home() avec 0 paramètres
         call_user_func_array([$controller, $methodName], $params);
-        return; // ARRÊT DU DISPATCH POUR LA ROUTE RACINE
+        return; 
     } 
      else {
-        // Redirection vers la 404 si le contrôleur d'accueil n'existe pas
+        // Redirection vers la 404 si le contrôleur n'existe pas
         die('<p>Controleur introuvable</p>');
     }
     

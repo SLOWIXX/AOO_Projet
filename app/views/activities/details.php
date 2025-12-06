@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body class="body-details">
+    <!--Pareil que home sauf que je boucle pas j'affiche que l'activité qui a son id dans l'url -->
         <a href="../../activities/home"><img src="/images/Back.png" alt=""></a>
         <div class="activity activity-details">
             <div class="activity-gauche">

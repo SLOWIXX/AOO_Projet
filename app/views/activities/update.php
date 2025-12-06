@@ -4,7 +4,7 @@
     
 <form  class="formulaire" action="" method="POST" enctype="multipart/form-data">
     <h1 style="margin-bottom:20px;">Modification : "<?= $activitie['nom'] ?>"</h1>
-    
+    <!-- Sur cette page la seul difference avec add c'est que j'utilise value pour pre remplir les inputs -->
         <label for="nom">Nom de l'activité</label>
         <input type="text" name="nom" id="nom" value="<?= $activitie['nom'] ?>" required>
 
@@ -42,6 +42,6 @@
         <input type="file" name="image" id="image" accept="image/*"  >
                 
 
-    <button type="submit">Enregistrer l'activité</button>
+    <button type="submit">Enregistrer les changement</button>
 </form>
 </main>

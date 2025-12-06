@@ -76,7 +76,9 @@ header {
   border: #3053ff 2px solid;
 }
 .button-delete {
-  background-color: rgb(255, 52, 52);
+  background: none;
+  color: rgb(255, 52, 52);
+  border: 2px solid rgb(255, 52, 52);
 }
 nav a {
   color: #333;

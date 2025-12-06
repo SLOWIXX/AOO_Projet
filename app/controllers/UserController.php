@@ -34,6 +34,7 @@ $data = [
 $this->renderView('user/one', $data);
 }
 
+//fonction pour l'insctription
 public function register(): void
 {
 // Si j'ai un post d'un formulaire
@@ -55,9 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Redirection si ça marche (vers la liste ou login)
         header('Location: /user/login'); 
         exit;
-    } else {
-        $error = "Erreur lors de l'inscription.";
-    }
+    } 
 }
 
 $this->renderView('user/register',);
@@ -68,7 +67,7 @@ $this->renderView('user/register',);
 
 
 
-
+//fonction pour la connexion
 public function login(): void
 {
 $error = null;
