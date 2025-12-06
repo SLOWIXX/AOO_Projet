@@ -1,4 +1,8 @@
 <?php
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+        header('Location: /activities/home');
+        exit;
+    }
 echo "<h1>Liste des utilisateurs</h1>";
 if (count($users) > 0) {
  foreach ($users as $user) {
