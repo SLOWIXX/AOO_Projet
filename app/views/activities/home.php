@@ -17,7 +17,7 @@
                 <p class="date"><?= date('d/m/Y', strtotime($activity['datetime_debut'])) ?></p>
             </div>
             <div class="description">
-            <p><?= $activity['description'] ?></p>
+            <p><?= mb_strimwidth($activity['description'], 0, 200, "...") ?></p>
             </div>
             <div class="type">
                 <p><?= $activity['nom_type']?> </p>
@@ -27,7 +27,14 @@
                     <img src="/images/Time_Span.png"><p><?= $activity['duree']?> min</p>
                     <img src="/images/Person.png" style="margin-bottom: 4px;"><p><?= $activity['places_disponibles']?></p>
                 </div>
+                <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'admin'): ?>
+            <a href="../../activities/delete/<?= $activity['id'] ?>"><button class="button-delete ">supprimer</button></a>
+            <a href="/activities/update/<?= $activity['id'] ?>"><button class="Bouton-principal">Modifier</button></a>
+        <?php endif; ?>
+            <?php if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user'): ?>
                 <a href="/activities/details/<?= $activity['id'] ?>"><button class="Bouton-principal">Reserver</button></a>
+            <?php endif; ?>
+                
             </div>
         </div>
         

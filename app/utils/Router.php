@@ -1,20 +1,39 @@
 <?php
 class Router
 {
- public function dispatch($url)
- {
+
+ public function dispatch(string $url = '/') 
+{
   // Suppression des / en début et fin de chaine
   $url = trim($url, '/');
   // Découpe en tableau l'URL
   $url = explode('/', $url);
 
-  // Le premier élément de l'URL est le contrôleur
+  
   if (empty($url[0])) {
-   // Redirection vers la 404
-   die('<p>404</p>');
-  }
+    // Si l'URL est vide, on force le contrôleur et la méthode par défaut (Accueil)
+    $controllerName = 'ActivitiesController'; // Nom du contrôleur
+    $methodName = 'home'; // Nom de la méthode
+    $params = []; // Pas de paramètres
+    
+    // 
+    // CHARGE LE CONTROLEUR PAR DEFAUT
+    if (file_exists("./app/controllers/$controllerName.php")) {
+        require_once "./app/controllers/$controllerName.php";
+        $controller = new $controllerName;
+        // Appel la méthode home() avec 0 paramètres
+        call_user_func_array([$controller, $methodName], $params);
+        return; // ARRÊT DU DISPATCH POUR LA ROUTE RACINE
+    } 
+     else {
+        // Redirection vers la 404 si le contrôleur d'accueil n'existe pas
+        die('<p>Controleur introuvable</p>');
+    }
+    
 
-  // Défini le nom du controller
+  } 
+
+  // Défini le nom du controller (Logique initiale du professeur)
   $controllerName = ucfirst($url[0]) . 'Controller';
 
   // Le second élément de l'URL est la méthode

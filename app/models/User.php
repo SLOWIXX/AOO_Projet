@@ -31,6 +31,11 @@ public function getNom(): string
  return $this->nom;
 }
 
+public function getRole(): string
+{
+ return $this->role;
+}
+
  public function getPassword(): string
  {
   return $this->password;

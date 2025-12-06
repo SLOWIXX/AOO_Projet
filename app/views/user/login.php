@@ -7,8 +7,9 @@
     
 </head>
 <body>
+    <main class="loginRegister">
     <h1>Login</h1>
-    <form action="../user/login" method="POST">
+    <form class="formulaire" action="../user/login" method="POST">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <br>
@@ -16,9 +17,12 @@
         <input type="password" id="password" name="password" required>
         <br>
         <button type="submit">Login</button>
+        <p class="black">C'est votre première connexion ? <a href="/user/login">Connectez-vous ici</a></p>
     </form>
 
-    <p>C'est votre première connexion ? <a href="./register">S'inscrire</a></p>
+    
+    
 
 </body>
+</main>
 </html>

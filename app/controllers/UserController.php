@@ -86,7 +86,8 @@ if ($user && password_verify($password, $user->getPassword())) {
         'id' => $user->getId(),
         'email' => $user->getEmail(),
         'prenom' => $user->getPrenom(),
-        'nom' => $user->getNom()
+        'nom' => $user->getNom(),
+        'role' => $user->getRole()
     ];
     header('Location: /activities/home');
     exit;
@@ -99,6 +100,13 @@ $this->renderView('user/login', [
     'title' => 'Connexion',
     'error' => $error
 ]);
+}
+
+public function logout(): void
+{
+session_destroy();
+header('Location: /activities/home');
+
 }
 
 }

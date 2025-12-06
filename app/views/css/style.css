@@ -29,7 +29,6 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
-
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,6 +36,15 @@ body {
   justify-content: center;
   padding: 0px;
   margin-top: 80px;
+  background-image: url("/images/Background_landing.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.body-details {
+  overflow: hidden;
+  padding: 0px 81px;
+  margin-top: 50px;
 }
 header {
   display: flex;
@@ -67,6 +75,9 @@ header {
   color: #3053ff;
   border: #3053ff 2px solid;
 }
+.button-delete {
+  background-color: rgb(255, 52, 52);
+}
 nav a {
   color: #333;
   font-size: 1rem;
@@ -90,13 +101,13 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background: white;
+
   padding: 20px;
   width: 30%;
 }
 
 .activity p {
-  color: #333;
+  color: #777777;
   font-size: 1rem;
   margin-top: 0px;
   text-align: left;
@@ -106,6 +117,47 @@ nav a:hover {
   height: 214px;
   border-radius: 8px;
   aspect-ratio: 16 / 9;
+}
+
+.activity-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  border-radius: 40px;
+  height: 65vh;
+}
+
+.bouton-details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.activity-gauche {
+  width: 257%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.activity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-left: 30px;
+}
+
+.activity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-left: 30px;
+}
+
+.activity-info p {
+  font-size: 1.3rem;
 }
 
 .haut-activity,
@@ -140,17 +192,37 @@ nav a:hover {
   font-weight: 600;
   margin-top: 20px;
 }
+.type-details {
+  padding: 5px 60px;
+  font-size: 1rem;
+  margin-top: 0px;
+}
+
 .description {
   margin-top: 15px;
-  font-size: 0.9rem;
-  color: #555;
-  height: 70px;
-  min-height: 70px;
-  max-height: 100px;
+  color: #999999;
+}
+
+.description-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.description-details p {
+  font-size: 1.3rem;
 }
 
 .type p {
   color: #3053ff;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.align {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .h1 {
@@ -158,6 +230,25 @@ nav a:hover {
   font-size: 2.5rem;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.loginRegister {
+  background: white;
+  padding: 10px;
+  width: 50vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+input {
+  width: 80%;
+  height: 50px;
+  border-radius: 12px;
+  padding: 0px 20px;
 }
 
 .register-form,
@@ -244,4 +335,29 @@ p a {
 
 p a:hover {
   color: #f0f8ff;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  width: 80%;
+}
+
+.formulaire {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formulaire a {
+  color: #3053ff;
+}
+.formulaire a:hover {
+  color: #002aff;
+}
+
+.black {
+  color: black;
 }
