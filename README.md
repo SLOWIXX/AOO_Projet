@@ -1,4 +1,4 @@
-# README : Système de Réservations d'Activités (MVC PHP)
+# README : Système de Réservations d'Activités Anisse El Bezazi et Quentin Deglas
 
 Ce projet est une application web de gestion et de réservation d'activités, développée en PHP selon l'architecture MVC (Modèle-Vue-Contrôleur).
 
